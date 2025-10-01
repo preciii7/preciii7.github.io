@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HidroAnalysis — Legal (Terms, Privacy, Refunds)</title>
+  <meta name="description" content="HidroAnalysis legal pages: Terms of Service, Privacy Policy, and Refund Policy.">
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111a2b;
+      --muted:#a8b3cf;
+      --text:#e6e9f2;
+      --accent:#7cc4ff;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue',Arial}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:900px;margin:40px auto;padding:0 20px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+    nav a{margin-right:16px}
+    h1{font-size:1.8rem;margin:0 0 12px}
+    h2{margin-top:32px}
+    .card{background:var(--card);border-radius:14px;padding:24px;margin:12px 0 28px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+    .meta{color:var(--muted);font-size:.95rem}
+    ul{padding-left:20px}
+    code{background:#0a152a;border:1px solid #1c2b4d;padding:.1rem .3rem;border-radius:6px}
+    footer{margin:40px 0;color:var(--muted);font-size:.9rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>HidroAnalysis — Legal</h1>
+      <nav>
+        <a href="#terms">Terms</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#refunds">Refunds</a>
+      </nav>
+    </header>
+
+    <section id="terms" class="card">
+      <h2>Terms of Service</h2>
+      <p class="meta"><strong>Last updated:</strong> {{fecha}}</p>
+      <ol>
+        <li><strong>Services.</strong> HidroAnalysis provides a SaaS for cleaning and standardizing hydro time series (rainfall, piezometer, pumping), with QA/QC, dashboards and exports.</li>
+        <li><strong>Accounts &amp; access.</strong> You must keep credentials secure. We may suspend access for misuse or non-payment.</li>
+        <li><strong>Subscriptions &amp; billing.</strong> Plans are billed in CAD on a recurring basis until cancelled. Taxes (including GST/HST and, where applicable, QST) may be added at checkout or collected by our Merchant of Record.</li>
+        <li><strong>Trials &amp; cancellations.</strong> If a trial is offered, you can cancel anytime before it ends to avoid charges. After subscribing, cancellations take effect at the end of the current billing period.</li>
+        <li><strong>Refunds.</strong> Monthly plans are generally non-refundable once the billing period starts. If we fail to deliver the service as described and cannot remedy within a reasonable time, contact support for a case review.</li>
+        <li><strong>Data &amp; privacy.</strong> We process limited personal and telemetry data to operate the service. See our <a href="#privacy">Privacy Policy</a> for details.</li>
+        <li><strong>Customer data.</strong> You retain ownership of your datasets. You grant us a limited license to process them solely to provide the service.</li>
+        <li><strong>Availability &amp; support.</strong> Service is provided “as is”. We aim for high availability but do not guarantee uninterrupted service. Support SLAs depend on your plan.</li>
+        <li><strong>Acceptable use.</strong> No unlawful use, no security testing without permission, no resale without written consent.</li>
+        <li><strong>Liability.</strong> To the maximum extent permitted by law, our aggregate liability is limited to the fees paid in the last 3 months. No indirect or consequential damages.</li>
+        <li><strong>Changes.</strong> We may update these Terms; material changes will be notified in-app or by email.</li>
+        <li><strong>Contact.</strong> <a href="mailto:support@{{tu-dominio-o-email}}">support@{{tu-dominio-o-email}}</a>.</li>
+      </ol>
+    </section>
+
+    <section id="privacy" class="card">
+      <h2>Privacy Policy</h2>
+      <p class="meta"><strong>Last updated:</strong> {{fecha}}</p>
+      <p>We collect: (a) account data (name, email, company), (b) billing data (handled by our payment provider / Merchant of Record), (c) product telemetry (events, logs, device/IP), and (d) customer content you upload (time series).</p>
+      <p><strong>Purpose:</strong> account creation, authentication, billing, support, service improvement, security.</p>
+      <p><strong>Lawful basis:</strong> contract performance and legitimate interests; where required, consent.</p>
+      <p><strong>Processors:</strong> hosting, analytics, error tracking, email, and our Merchant of Record for payments and taxes.</p>
+      <p><strong>International transfers:</strong> data may be processed outside your country with appropriate safeguards.</p>
+      <p><strong>Retention:</strong> for as long as needed to provide the service or as required by law; you can request deletion.</p>
+      <p><strong>Your rights:</strong> access, rectify, delete, port, and object as applicable.</p>
+      <p><strong>Security:</strong> we use technical/organizational measures; no method is 100% secure.</p>
+      <p><strong>PIPEDA notice (Canada):</strong> We follow principles consistent with PIPEDA, including purpose specification, consent, use and disclosure limitations, safeguards, access and correction.</p>
+      <p><strong>Contact:</strong> <a href="mailto:privacy@{{tu-dominio-o-email}}">privacy@{{tu-dominio-o-email}}</a>.</p>
+    </section>
+
+    <section id="refunds" class="card">
+      <h2>Refund Policy</h2>
+      <ul>
+        <li><strong>Trials:</strong> cancel before trial end to avoid charges.</li>
+        <li><strong>Monthly plans:</strong> non-refundable once the billing period starts.</li>
+        <li><strong>Annual plans:</strong> prorated refunds only if required by law or when the service cannot be delivered as described and we fail to remedy.</li>
+      </ul>
+      <p>To request a review, email <a href="mailto:billing@{{tu-dominio-o-email}}">billing@{{tu-dominio-o-email}}</a> within 7 days of charge, including your account email and invoice number.</p>
+    </section>
+
+    <footer>
+      © <span id="y"></span> HidroAnalysis. This page is provided for convenience and does not constitute legal advice.
+    </footer>
+  </div>
+  <script>
+    // Auto-fill year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
